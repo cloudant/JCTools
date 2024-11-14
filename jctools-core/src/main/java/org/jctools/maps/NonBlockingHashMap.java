@@ -352,7 +352,7 @@ public class NonBlockingHashMap<TypeK, TypeV>
     return objectsEquals(putIfMatch( key, newValue, oldValue ), oldValue);
   }
   private static boolean objectsEquals(Object a, Object b) {
-    return (a == b) || (a != null && a.equals(b));
+    return (a == b) || (b != null && b.equals(a));
   }
 
   // Atomically replace newVal for oldVal, returning the value that existed
